@@ -1,11 +1,9 @@
 <?php
 
-namespace Salupro\ERP\Providers;
+namespace Salupro\GraphQL\Providers;
 
-use App\Http\Controllers\Api\GraphQLController;
-use Illuminate\Routing\Route;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Salupro\GraphQL\Controllers\GraphQLController;
 
 class GraphQLServiceProvider extends ServiceProvider
 {
@@ -16,7 +14,7 @@ class GraphQLServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::get('graphql', GraphQLController::class.'@execute')->middleware(['auth:api']);
+        \Route::post('api/graphql', GraphQLController::class.'@execute')->middleware(['auth:api']);
     }
 
 }
