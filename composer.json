@@ -9,7 +9,7 @@
   ],
   "require": {
     "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-    "salupro/graphql-php-parser": "dev-master"
+    "salupro/graphql-php-parser": "1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "5.7.*",
@@ -19,7 +19,6 @@
     "mockery/mockery": "0.9.*",
     "satooshi/php-coveralls": "^1.0"
   },
-  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "Salupro\\ERP\\": "src/"
